@@ -3,7 +3,7 @@ This repository implements an HDR imaging pipeline using the OV7670 camera on th
 
 ## PS–PL Architecture
 
-### 📘 Processing System (PS)
+### Processing System (PS)
 
 - Configures the OV7670 camera via I²C  
 - Alternates between two exposure values  
@@ -13,7 +13,7 @@ This repository implements an HDR imaging pipeline using the OV7670 camera on th
 
 ---
 
-### 📗 Programmable Logic (PL)
+### Programmable Logic (PL)
 
 - Receives the two frames (short and long exposure)  
 - Sequentially reads each corresponding pair of pixels  
