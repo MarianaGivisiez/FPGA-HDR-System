@@ -161,6 +161,7 @@ int i2c_init(UINTPTR BaseAddress)
 }
 
 /************** Change exposure time **************/
+
 int ov7670_set_exposure(uint16_t exposure16)
 {
     int Status;
@@ -168,10 +169,10 @@ int ov7670_set_exposure(uint16_t exposure16)
     uint8_t high = (exposure16 >> 8) & 0xFF;
     uint8_t low  = exposure16 & 0xFF;
 
-    /* AECH register uses bits [9:2], so we remove the two least significant bits */
+    /* AECH register (bits [9:2]) */
     uint8_t aech  = (low >> 2) & 0xFF;
 
-    /* AECHH uses bits [15:10] → take the upper 6 bits */
+    /* AECHH register (bits [15:10]) */
     uint8_t aechh = (high & 0x3F);
 
     /* Write AECH (lower exposure bits) */
