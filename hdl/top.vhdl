@@ -24,7 +24,7 @@ architecture RTL of TOP is
     signal w1_s : unsigned(7 downto 0)  := to_unsigned(1, 8);
     signal w2_s : unsigned(7 downto 0)  := to_unsigned(1, 8);
 
-    component HDR_FUSAO_PIPELINE is
+    component HDR_PIPELINE is
         port (
             clk        : in  std_logic;
             rst        : in  std_logic;
@@ -70,7 +70,7 @@ begin
     ocm_din  <= ocm_din_int;
     ocm_we   <= ocm_we_int;
 
-    PIPE: entity work.HDR_FUSAO_PIPELINE
+    PIPE: entity work.HDR_PIPELINE
         port map (
             clk => clk,
             rst => rst,
