@@ -10,7 +10,7 @@
 /*** Adjust according to the camera resolution ***/
 #define FRAME_WIDTH        640
 #define FRAME_HEIGHT       480
-#define BYTES_PER_PIXEL    2
+#define BYTES_PER_PIXEL    1
 #define STRIDE             (FRAME_WIDTH * BYTES_PER_PIXEL)
 #define FRAME_SIZE         (STRIDE * FRAME_HEIGHT)
 
